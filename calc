@@ -1,0 +1,49 @@
+public static void main(String [] args)
+   {
+       //definir dados
+       double potencia;
+       double raiz;
+       int absoluto;
+
+       double x;
+       double y;
+
+       //definir dados
+       int opcoes;
+       do {
+           //opcoes
+           IO.println( "0 - parar ");
+           IO.println( "1 - potencia" );
+           IO.println( "2 - raiz quadrada ");
+           IO.println( "3 - valor absoluto");
+
+           opcoes = IO.readint( "Qual sua opcao? " );
+
+           switch (opcoes)
+           {
+               case 0:
+                   break;
+               case 1:
+                   x = IO.readdouble( "Entre com o valor para potenciacao: " );
+                   y = IO.readdouble("Entrar com o exponencial: ");
+                   potencia = Math.pow(x, y);
+                   IO.println( "Potencia = " +(int)potencia );
+                   break;
+               case 2:
+                   raiz = IO.readdouble("Entrar com um radical: " );
+                   raiz = Math.sqrt(raiz);
+                   IO.println( "Raiz quadrada = " + (int)raiz);
+                   break;
+               case 3:
+                   absoluto = IO.readint("Informe um valor: " );
+                   absoluto = Math.abs(absoluto);
+                   IO.println( "Valor absoluto = " + absoluto );
+                   break;
+
+               default:
+                   IO.println( "Error, invalid option" );
+                   break;
+           }
+       }
+       while ( opcoes != 0);
+    } //end main()
